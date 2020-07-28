@@ -1,279 +1,291 @@
-ÈºÀïÓĞ¸öÍ¬Ñ§ÎÊÁËÎÊÌâ `ÈçºÎÒş²ØÔËĞĞ winform ³ÌĞò£¿`£¬ÌáÆğÁËÎÒµÄĞËÈ¤£¬ÍæÍæßÂ£¿ÄÇ¾ÍÍæÍæ°É£¡
+ç¾¤é‡Œæœ‰ä¸ªåŒå­¦é—®äº†é—®é¢˜ `å¦‚ä½•éšè—è¿è¡Œ winform ç¨‹åºï¼Ÿ`ï¼Œæèµ·äº†æˆ‘çš„å…´è¶£ï¼Œç©ç©å‘—ï¼Ÿé‚£å°±ç©ç©å§ï¼
 
-1¡¢HiddenApp1£¬µÚÒ»°æ
+1ã€HiddenApp1ï¼Œç¬¬ä¸€ç‰ˆ
 
-	½«Ò»¸ö `winform` ³ÌĞòÒş²ØÖ´ĞĞ£¬Òş²ØÖ´ĞĞµÄ·½Ê½ÓĞºÜ¶àÖÖ£¬µÚÒ»¸ö `demo` ¾ÍÓÃ×î¼òµ¥µÄ·½Ê½£¬ÊµÏÖÒş²ØÖ´ĞĞ¡£
+å°†ä¸€ä¸ª `winform` ç¨‹åºéšè—æ‰§è¡Œï¼Œéšè—æ‰§è¡Œçš„æ–¹å¼æœ‰å¾ˆå¤šç§ï¼Œç¬¬ä¸€ä¸ª `demo` å°±ç”¨æœ€ç®€å•çš„æ–¹å¼ï¼Œå®ç°éšè—æ‰§è¡Œã€‚
 
-	`demo` Ö´ĞĞÊ±£¬²»»áÏÔÊ¾ÈÎºÎ´°Ìå£¬µ«ÊÇ¹ı10Ãë£¬»áµ¯³ö¶Ô»°¿òÖ¤Ã÷³ÌĞòÔÚÔËĞĞ¡£
+`demo` æ‰§è¡Œæ—¶ï¼Œä¸ä¼šæ˜¾ç¤ºä»»ä½•çª—ä½“ï¼Œä½†æ˜¯è¿‡10ç§’ï¼Œä¼šå¼¹å‡ºå¯¹è¯æ¡†è¯æ˜ç¨‹åºåœ¨è¿è¡Œã€‚
 
-	1) °´ÕÕ³£¹æË¼Â·£¬ÔÚ´°Ìå³õÊ¼»¯Íê³ÉÖ®ºó£¬µ÷Õû´°Ìå²ÎÊı¡£
+1) æŒ‰ç…§å¸¸è§„æ€è·¯ï¼Œåœ¨çª—ä½“åˆå§‹åŒ–å®Œæˆä¹‹åï¼Œè°ƒæ•´çª—ä½“å‚æ•°ã€‚
 
-	```
-	public partial class Form1 : Form
+```
+public partial class Form1 : Form
+{
+    public Form1()
     {
-        public Form1()
-        {
-            InitializeComponent();
+        InitializeComponent();
 
-            //²»ÒªÏÔÊ¾ÔÚÈÎÎñÀ¸
-            this.ShowInTaskbar = false;
-            //Òş²Ø´°Ìå
-            this.Visible = false;
-            //´°Ìå¿í¶Èµ÷ÕûÎª0
-            this.Width = 0;
-            //´°Ìå¸ß¶Èµ÷ÕûÎª0
-            this.Height = 0;
-            //´°Ìå×î×ó±ßÉèÖÃ³É-10000£¬±£Ö¤ÔÚÆÁÄ»Íâ±ß
-            this.Left = -10000;
-            //´°Ìå×î¶¥²¿ÉèÖÃ³É-10000£¬±£Ö¤ÔÚÆÁÄ»Íâ±ß
-            this.Top = -10000;
-        }
+        //ä¸è¦æ˜¾ç¤ºåœ¨ä»»åŠ¡æ 
+        this.ShowInTaskbar = false;
+        //éšè—çª—ä½“
+        this.Visible = false;
+        //çª—ä½“å®½åº¦è°ƒæ•´ä¸º0
+        this.Width = 0;
+        //çª—ä½“é«˜åº¦è°ƒæ•´ä¸º0
+        this.Height = 0;
+        //çª—ä½“æœ€å·¦è¾¹è®¾ç½®æˆ-10000ï¼Œä¿è¯åœ¨å±å¹•å¤–è¾¹
+        this.Left = -10000;
+        //çª—ä½“æœ€é¡¶éƒ¨è®¾ç½®æˆ-10000ï¼Œä¿è¯åœ¨å±å¹•å¤–è¾¹
+        this.Top = -10000;
     }
-	```
+}
+```
 
-    2) ÔÚ `Form1_Load` ·½·¨ÀïĞÂÆô¶¯Ò»¸öÏß³Ì£¬µ¯³ö¶Ô»°¿òÊÔÊÔ¡£
+2) åœ¨ `Form1_Load` æ–¹æ³•é‡Œæ–°å¯åŠ¨ä¸€ä¸ªçº¿ç¨‹ï¼Œå¼¹å‡ºå¯¹è¯æ¡†è¯•è¯•ã€‚
 
-    ```
-    private void Form1_Load(object sender, EventArgs e)
-    {
-        new Thread(new ThreadStart(() =>
-        {
-            Thread.Sleep(10 * 1000);
-            MessageBox.Show("ÎÒÔÚºóÌ¨Ö´ĞĞÓ´...");
-        })).Start();
-    }
-    ```
-
-    ÔËĞĞÆğÀ´·¢ÏÖ»¹ÊÇÓĞÏÔÊ¾£¬¶øÇÒ×ó±ßºÍ¶¥±äµÄÎ»ÖÃÃ»ÓĞÉèÖÃ³É¹¦¡£ÈçÍ¼£º
-
-    3) »¹ÓĞÒ»¸ö `opacity`£¬´°ÌåÍ¸Ã÷¶ÈµÄÊôĞÔ£¬ÉèÖÃ³É0¡£ÈçÏÂ£º
-
-    ```
-    this.Opacity = 0;
-    ```
-    4) ÏÖÔÚ¾ÍºÃÁË£¬¿´²»¼û´°Ìå£¬´ïµ½ÁËÒş²ØµÄÄ¿µÄ£¬¼òµ¥´Ö±©£¬µ«ÊÇ»¹´ÕºÏÊµÓÃ¡£
-
-    > ²»×ãÖ®´¦£º´°ÌåËäÈ»ÊÇÒş²ØÁË£¬µ«Ö»ÊÇµ÷ÕûÁËÍ¸Ã÷¶È£¨ĞÄÀïÓĞµã²»Ë¬£¬Ã÷Ã÷ËüÊÇ´æÔÚµÄ£©¡£
-
-2¡¢HiddenApp2£¬µÚ¶ş°æ
-
-    ¾­¹ıµÚÒ»¸ö `demo`£¬ÎÒÃÇ¼òµ¥µÄÊµÏÖÁËÒ»¸öÒş²ØÔËĞĞµÄÓ¦ÓÃ³ÌĞò£¬ÄÇÃ´»¹ÓĞÊ²Ã´·½Ê½ÄÜÒş²ØÖ´ĞĞÄØ£¿
-
-    Ï¸ĞÄµÄÍ¬Ñ§·¢ÏÖ£¬ÕâÀïÔÚ `Program.cs` ÎÄ¼ş `Main` ·½·¨ÖĞÔËĞĞÁËÒ»¸ö `new Form1()`£¬ÄÇÃ´ÓĞÊ²Ã´°ì·¨ÄÜ²»Ö´ĞĞÕâÒ»¾ä£¬Ó¦ÓÃ³ÌĞò»¹ÄÜÔËĞĞÄØ£¿
-
-    ÎÒÃÇ°ÑÕâÒ»¾ä×¢ÊÍµô£¬¿´µ½ `Application` ÀàÌá¹©ÁËÒ»¸ö `Run` ·½·¨£¬²»´øÈÎºÎ²ÎÊı¡£ÎÒÃÇÊÔ×ÅÉ¾µôÃ»ÓÃµÄ `Form1` Õâ¸ö´°Ìå£¬°Ñ´úÂë¸Ä³ÉÏÂÃæÕâÑùÖ´ĞĞÒ»ÏÂÊÔÊÔ¡£
-
-    ```
-    Application.EnableVisualStyles();
-    Application.SetCompatibleTextRenderingDefault(false);
-    //Application.Run(new Form1());
-    Application.Run();
-    ```
-
-    prefect£¡³ÌĞòÕÕ³£¿ÉÒÔÔËĞĞ£¬ÈÎÎñ¹ÜÀíÆ÷ÖĞ¿ÉÒÔ¿´µ½ `HiddenApp2.exe` Õâ¸ö½ø³Ì£¬Ò²²»ÓÃ·ÑĞÄÒş²Ø´°Ìå£¬ºÎÀÖ²»Îª£¿
-
-    PS: Ä³Ğ©Ïë·¨²»Á¼µÄÍ¬Ñ§£¬¿ÉÄÜÏëµ½ÁËÒş²ØÆğÀ´¸Éµã»µÊÂ£¬¼Ç×¡£º·¨Íø»Ö»Ö¡¢Êè¶ø²»Â©£¡
-
-    ÔÙÀ´¸ÄÔìÒ»ÏÂ£¬ÈÃËûÊµÏÖÉÏÃæµÄ¹¦ÄÜ£¬10Ãëºóµ¯³öÒ»¸ö¶Ô»°¿ò£¬Ö¤Ã÷³ÌĞòÈ·ÊµÔÚÔËĞĞ¡£
-
-    ```
-    Application.EnableVisualStyles();
-    Application.SetCompatibleTextRenderingDefault(false);
-    //Application.Run(new Form1());
+```
+private void Form1_Load(object sender, EventArgs e)
+{
     new Thread(new ThreadStart(() =>
     {
         Thread.Sleep(10 * 1000);
-        MessageBox.Show("ÎÒÔÚºóÌ¨Ö´ĞĞÓ´...");
+        MessageBox.Show("æˆ‘åœ¨åå°æ‰§è¡Œå“Ÿ...");
     })).Start();
-    Application.Run();
-    ```
+}
+```
 
-    ´úÂëºÜ¼òµ¥£¬¾ÍÊÇÆô¶¯Ò»¸öÏß³ÌÑÓ³Ù10Ãëºóµ¯´°£¬ÓĞµÄÍ¬Ñ§¿ÉÄÜÒªÎÊÁË£¬ÎªÉ¶ `new Thread` ²»·ÅÔÚ `Application.Run()` ·½·¨Ö®ºó£¿ÒòÎª `Application.Run()` »áÊ¹Ó¦ÓÃ³ÌĞòÖ÷½ø³Ì×èÈûÖ´ĞĞ£¬ËùÒÔºóÃæµÄ´úÂë²»»áÖ´ĞĞ¡£
+è¿è¡Œèµ·æ¥å‘ç°è¿˜æ˜¯æœ‰æ˜¾ç¤ºï¼Œè€Œä¸”å·¦è¾¹å’Œé¡¶å˜çš„ä½ç½®æ²¡æœ‰è®¾ç½®æˆåŠŸã€‚å¦‚å›¾ï¼š
 
-3¡¢HiddenApp3£¨¼ôÇĞ°åÎ²°Í£ºClipboardTail£©
+![](https://mmbiz.qpic.cn/mmbiz_png/aClMHOpCiag8Siabd4czFxCrn57SWO83X0JkWrLZf7kjXvh00nI1xOzxtWSLDpSpjfXJl9HocqlYv5oZypGOrIhQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
-    ÕâÒ»½ÚÀï£¬ÎÒÃÇÊ¹ÓÃµÚ¶ş²½ÀïÊ¹ÓÃµÄ·½·¨À´¸ÉÒ»µã»µÊÂ£¨PS£ºÎÒÏ²»¶£©£¬×öÒ»¸ö `¼ôÇĞ°åÎ²°Í` £¬ÎÒÃÇ»á¾­³£µÄ¸´ÖÆÕ³Ìù¶«Î÷£¬µ«ÊÇÄã¸´ÖÆÕ³ÌùµÄÄÚÈİÎÒºÜ¸ĞĞËÈ¤£¬¹ş¹ş¡£
+3) è¿˜æœ‰ä¸€ä¸ª `opacity`ï¼Œçª—ä½“é€æ˜åº¦çš„å±æ€§ï¼Œè®¾ç½®æˆ0ã€‚å¦‚ä¸‹ï¼š
 
-    ×îÖÕĞ§¹û£ºËû»áÔÚÄã¸´ÖÆµÄÎÄ±¾ºóÃæ×ºÉÏÉèÖÃºÃµÄÎÄ×Ö£¬È»ºó·Å½ø¼ôÇĞ°å¡£
+```
+this.Opacity = 0;
+```
+4) ç°åœ¨å°±å¥½äº†ï¼Œçœ‹ä¸è§çª—ä½“ï¼Œè¾¾åˆ°äº†éšè—çš„ç›®çš„ï¼Œç®€å•ç²—æš´ï¼Œä½†æ˜¯è¿˜å‡‘åˆå®ç”¨ã€‚
+
+![](https://mmbiz.qpic.cn/mmbiz_png/aClMHOpCiag8Siabd4czFxCrn57SWO83X0nAnM8M4V0Rd9R75bqBWTBCLwdgheibDcXFaPkRAJAhT0CT20UwUTNzg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+> ä¸è¶³ä¹‹å¤„ï¼šçª—ä½“è™½ç„¶æ˜¯éšè—äº†ï¼Œä½†åªæ˜¯è°ƒæ•´äº†é€æ˜åº¦ï¼ˆå¿ƒé‡Œæœ‰ç‚¹ä¸çˆ½ï¼Œæ˜æ˜å®ƒæ˜¯å­˜åœ¨çš„ï¼‰ã€‚
+
+2ã€HiddenApp2ï¼Œç¬¬äºŒç‰ˆ
+
+ç»è¿‡ç¬¬ä¸€ä¸ª `demo`ï¼Œæˆ‘ä»¬ç®€å•çš„å®ç°äº†ä¸€ä¸ªéšè—è¿è¡Œçš„åº”ç”¨ç¨‹åºï¼Œé‚£ä¹ˆè¿˜æœ‰ä»€ä¹ˆæ–¹å¼èƒ½éšè—æ‰§è¡Œå‘¢ï¼Ÿ
+
+ç»†å¿ƒçš„åŒå­¦å‘ç°ï¼Œè¿™é‡Œåœ¨ `Program.cs` æ–‡ä»¶ `Main` æ–¹æ³•ä¸­è¿è¡Œäº†ä¸€ä¸ª `new Form1()`ï¼Œé‚£ä¹ˆæœ‰ä»€ä¹ˆåŠæ³•èƒ½ä¸æ‰§è¡Œè¿™ä¸€å¥ï¼Œåº”ç”¨ç¨‹åºè¿˜èƒ½è¿è¡Œå‘¢ï¼Ÿ
+
+æˆ‘ä»¬æŠŠè¿™ä¸€å¥æ³¨é‡Šæ‰ï¼Œçœ‹åˆ° `Application` ç±»æä¾›äº†ä¸€ä¸ª `Run` æ–¹æ³•ï¼Œä¸å¸¦ä»»ä½•å‚æ•°ã€‚æˆ‘ä»¬è¯•ç€åˆ æ‰æ²¡ç”¨çš„ `Form1` è¿™ä¸ªçª—ä½“ï¼ŒæŠŠä»£ç æ”¹æˆä¸‹é¢è¿™æ ·æ‰§è¡Œä¸€ä¸‹è¯•è¯•ã€‚
+
+```
+Application.EnableVisualStyles();
+Application.SetCompatibleTextRenderingDefault(false);
+//Application.Run(new Form1());
+Application.Run();
+```
+
+prefectï¼ç¨‹åºç…§å¸¸å¯ä»¥è¿è¡Œï¼Œä»»åŠ¡ç®¡ç†å™¨ä¸­å¯ä»¥çœ‹åˆ° `HiddenApp2.exe` è¿™ä¸ªè¿›ç¨‹ï¼Œä¹Ÿä¸ç”¨è´¹å¿ƒéšè—çª—ä½“ï¼Œä½•ä¹ä¸ä¸ºï¼Ÿ
+
+PS: æŸäº›æƒ³æ³•ä¸è‰¯çš„åŒå­¦ï¼Œå¯èƒ½æƒ³åˆ°äº†éšè—èµ·æ¥å¹²ç‚¹åäº‹ï¼Œè®°ä½ï¼šæ³•ç½‘æ¢æ¢ã€ç–è€Œä¸æ¼ï¼
+
+å†æ¥æ”¹é€ ä¸€ä¸‹ï¼Œè®©ä»–å®ç°ä¸Šé¢çš„åŠŸèƒ½ï¼Œ10ç§’åå¼¹å‡ºä¸€ä¸ªå¯¹è¯æ¡†ï¼Œè¯æ˜ç¨‹åºç¡®å®åœ¨è¿è¡Œã€‚
+
+```
+Application.EnableVisualStyles();
+Application.SetCompatibleTextRenderingDefault(false);
+//Application.Run(new Form1());
+new Thread(new ThreadStart(() =>
+{
+    Thread.Sleep(10 * 1000);
+    MessageBox.Show("æˆ‘åœ¨åå°æ‰§è¡Œå“Ÿ...");
+})).Start();
+Application.Run();
+```
+
+ä»£ç å¾ˆç®€å•ï¼Œå°±æ˜¯å¯åŠ¨ä¸€ä¸ªçº¿ç¨‹å»¶è¿Ÿ10ç§’åå¼¹çª—ï¼Œæœ‰çš„åŒå­¦å¯èƒ½è¦é—®äº†ï¼Œä¸ºå•¥ `new Thread` ä¸æ”¾åœ¨ `Application.Run()` æ–¹æ³•ä¹‹åï¼Ÿå› ä¸º `Application.Run()` ä¼šä½¿åº”ç”¨ç¨‹åºä¸»è¿›ç¨‹é˜»å¡æ‰§è¡Œï¼Œæ‰€ä»¥åé¢çš„ä»£ç ä¸ä¼šæ‰§è¡Œã€‚
+
+3ã€HiddenApp3ï¼ˆå‰ªåˆ‡æ¿å°¾å·´ï¼šClipboardTailï¼‰
+
+è¿™ä¸€èŠ‚é‡Œï¼Œæˆ‘ä»¬ä½¿ç”¨ç¬¬äºŒæ­¥é‡Œä½¿ç”¨çš„æ–¹æ³•æ¥å¹²ä¸€ç‚¹åäº‹ï¼ˆPSï¼šæˆ‘å–œæ¬¢ï¼‰ï¼Œåšä¸€ä¸ª `å‰ªåˆ‡æ¿å°¾å·´` ï¼Œæˆ‘ä»¬ä¼šç»å¸¸çš„å¤åˆ¶ç²˜è´´ä¸œè¥¿ï¼Œä½†æ˜¯ä½ å¤åˆ¶ç²˜è´´çš„å†…å®¹æˆ‘å¾ˆæ„Ÿå…´è¶£ï¼Œå“ˆå“ˆã€‚
+
+æœ€ç»ˆæ•ˆæœï¼šä»–ä¼šåœ¨ä½ å¤åˆ¶çš„æ–‡æœ¬åé¢ç¼€ä¸Šè®¾ç½®å¥½çš„æ–‡å­—ï¼Œç„¶åæ”¾è¿›å‰ªåˆ‡æ¿ã€‚
     
-    PS: Ñ¸À×µÄ¼àÊÓ¼ôÇĞ°å£¬¾ÍÊÇ¼àÊÓÁË¼ôÇĞ°åÖĞÊÇ·ñÓĞ Html ¸ñÊ½µÄÎÄ±¾£¬´ÓÖĞ¼ä½âÎö URL£¬ÊµÏÖÏÂÔØ¡£
+PS: è¿…é›·çš„ç›‘è§†å‰ªåˆ‡æ¿ï¼Œå°±æ˜¯ç›‘è§†äº†å‰ªåˆ‡æ¿ä¸­æ˜¯å¦æœ‰ Html æ ¼å¼çš„æ–‡æœ¬ï¼Œä»ä¸­é—´è§£æ URLï¼Œå®ç°ä¸‹è½½ã€‚
 
-    winform ¿ª·¢ÀïÊ¹ÓÃ¼ôÇĞ°åÊ¹ÓÃ `Clipboard` Õâ¸öÃÜ·âÀà£¬À´¿´ÏÂ¶¨Òå£º
+winform å¼€å‘é‡Œä½¿ç”¨å‰ªåˆ‡æ¿ä½¿ç”¨ `Clipboard` è¿™ä¸ªå¯†å°ç±»ï¼Œæ¥çœ‹ä¸‹å®šä¹‰ï¼š
 
-    ```
-    namespace System.Windows.Forms
+```
+namespace System.Windows.Forms
+{
+    public sealed class Clipboard
     {
-        public sealed class Clipboard
+        public static void Clear();
+        public static bool ContainsAudio();
+        public static bool ContainsData(string format);
+        public static bool ContainsFileDropList();
+        public static bool ContainsImage();
+        public static bool ContainsText(TextDataFormat format);
+        public static bool ContainsText();
+        public static Stream GetAudioStream();
+        public static object GetData(string format);
+        public static IDataObject GetDataObject();
+        public static StringCollection GetFileDropList();
+        public static Image GetImage();
+        public static string GetText();
+        public static string GetText(TextDataFormat format);
+        public static void SetAudio(Stream audioStream);
+        public static void SetAudio(byte[] audioBytes);
+        public static void SetData(string format, object data);
+        public static void SetDataObject(object data);
+        public static void SetDataObject(object data, bool copy, int retryTimes, int retryDelay);
+        public static void SetDataObject(object data, bool copy);
+        public static void SetFileDropList(StringCollection filePaths);
+        public static void SetImage(Image image);
+        public static void SetText(string text);
+        public static void SetText(string text, TextDataFormat format);
+    }
+}
+
+```
+
+è¿™ä¸€èŠ‚ä¸»è¦æ˜¯ä½¿ç”¨ `public static string GetText();` è¿™ä¸ªæ–¹æ³•ï¼Œæ¥ç›—å–ç”¨æˆ·å‰ªåˆ‡çš„å†…å®¹ï¼Œå¹¶åœ¨å…¶åè¾¹è¿½åŠ ä¸€ä¸ªå°¾å·´æ¥æ¶æä¸€ä¸‹ã€‚
+
+åŸç†ï¼šä½¿ç”¨åå°çº¿ç¨‹ï¼Œå®šæ—¶çš„æŠŠå‰ªåˆ‡æ¿å†…å®¹å¤åˆ¶ä¸‹æ¥ï¼Œç„¶åè¿½åŠ ä¸€äº›æ–‡å­—ï¼Œå†å†™å›å‰ªåˆ‡æ¿ã€‚åºŸè¯ä¸å¤šè¯´ï¼Œç›´æ¥ä¸Šæ ¸å¿ƒä»£ç ï¼š
+
+```
+var text = Clipboard.GetText();
+//ä¸è¦é—®æˆ‘ä¸ºå•¥ä¸ç”¨ String.IsNullOrEmpty()ï¼Œå› ä¸ºæˆ‘ç”¨çš„ .Net Framework 3.5
+if (text != null && text.Length > 0)
+{
+    if (!text.EndsWith(TAIL))
+    {
+        Clipboard.SetText(text + TAIL);
+        Debug.WriteLine($"[{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}] successful catch textã€{text}ã€‘changed toã€{Clipboard.GetText()}ã€‘");
+    }
+}
+```
+
+ä»£ç å¾ˆçŸ­ï¼Œä½†æ˜¯å¾ˆæ¶æï¼Œä¸è¦æ‹¿æ¥å¹²åäº‹ã€‚
+
+#### æœ‰è¶£çš„é—®é¢˜ï¼š
+
+çœ‹ä¸‹é¢çš„ä»£ç ï¼š
+
+```
+private static void MemoryBomb()
+{
+    Clipboard.SetDataObject(new MemoryStream(new byte[1024000000 * 2L]));
+    var data = Clipboard.GetDataObject()?.GetData(typeof(MemoryStream));
+
+    var thread = new Thread(new ThreadStart(() =>
+    {
+        Thread.Sleep(3000);
+        //1
+        data = null;
+        GC.Collect();
+        Clipboard.SetDataObject(new MemoryStream(new byte[0]));
+        data = Clipboard.GetDataObject()?.GetData(typeof(MemoryStream));
+        //2
+        data = null;
+        GC.Collect();
+    }));
+    thread.SetApartmentState(ApartmentState.STA);
+    thread.Start();
+}
+```
+
+çœ‹åˆ°å‰ªåˆ‡æ¿ `Clipboard.SetDataObject` æ–¹æ³•å¯ä»¥æ¥å—ä¸€ä¸ª `object` å‚æ•°ï¼Œæˆ‘å¥½å¥‡çš„å¼„äº†ä¸€ä¸ªå¾ˆå¤§çš„ `byte[]` æ”¾äº†è¿›å»ï¼Œç»“æœå‘ç°åœ¨ `GetData()` æ–¹æ³•è°ƒç”¨åå†…å­˜å‰§å¢ï¼ˆå®Œå…¨ç®—å¾—ä¸Šå†…å­˜ç‚¸å¼¹ï¼‰ï¼Œå¤§å°æ˜¯2å€çš„ `byte[]` å¤§å°å­—èŠ‚ï¼Œæˆ‘åˆé‡å¯ä¸€ä¸ªçº¿ç¨‹æ¥ï¼Œå†æ¬¡è°ƒç”¨ `SetDataObject()` æ–¹æ³•è®¾ç½®å‰ªåˆ‡æ¿å†…å®¹ï¼Œå‘ç°å†…å­˜ä¸ä¼šé‡Šæ”¾ã€‚
+
+åŠ äº†ç¬¬ä¸€ä¸ª `GC.Collect();` ä¹‹åï¼Œå†…å­˜ä¼šé™ä¸€åŠï¼Œæˆ‘çŒœæƒ³ `data` å˜é‡è¢«é‡Šæ”¾ï¼Œä½†æ˜¯å‰ªåˆ‡æ¿å†…å®¹æ²¡é‡Šæ”¾ï¼Œ2å€å¤§å°çš„å­—èŠ‚åº”è¯¥æ˜¯ `data` å˜é‡å ç”¨ 2Gï¼Œå‰ªåˆ‡æ¿å ç”¨ 2Gã€‚å¦‚å›¾ï¼š
+
+![åˆšå¯åŠ¨](https://mmbiz.qpic.cn/mmbiz_png/aClMHOpCiag8Siabd4czFxCrn57SWO83X0pBtYHwKWUS0L62S7IQcaMwEfXkAJapk1xHhkicTa1Lgq93sUtfYm54w/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+![GC.Collect();](https://mmbiz.qpic.cn/mmbiz_png/aClMHOpCiag8Siabd4czFxCrn57SWO83X0GdcUI01H0fXso8luOwcEY6MAj7yZXwEYYgdkz8dnia0Majsm5pG7Kkw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+ç´§æ¥ç€æ‰§è¡Œå®Œæ¯•è¿™æ®µä»£ç ä¹‹åï¼š
+
+```
+Clipboard.SetDataObject(new MemoryStream(new byte[0]));
+data = Clipboard.GetDataObject()?.GetData(typeof(MemoryStream));
+```
+æœ‰è¶£çš„æ˜¯å ç”¨çš„2Gå†…å­˜ï¼Œä¸ä¼šé‡Šæ”¾ã€‚ä¸ºä»€ä¹ˆä¸Šé¢çš„ `GetData` ä¼šä½¿å†…å­˜å‰§å¢ï¼Œè€Œè¿™ä¸€å¥ä¸ä¼šä½¿å†…å­˜å˜å°å‘¢ï¼Ÿå¦‚å›¾ï¼š
+
+![](https://mmbiz.qpic.cn/mmbiz_png/aClMHOpCiag8Siabd4czFxCrn57SWO83X0hFKg5kl9MZELwsGGDQtQaKQtuz0vU1aoHMRPMweZgbPGo1OWYOYyLQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+ç´§æ¥ç€æ‰§è¡Œç¬¬äºŒä¸ª `GC.Collect();` æ‰§è¡Œä¹‹åï¼Œå†…å­˜ä¼šè¢«å›æ”¶ï¼Œä½†æ˜¯è¿˜æ˜¯æ¯”æœ€åˆçš„å¤§äº†ä¸€äº›ï¼Œæ²¡æœ‰å®Œå…¨é‡Šæ”¾ã€‚å¦‚å›¾ï¼š
+
+![](https://mmbiz.qpic.cn/mmbiz_png/aClMHOpCiag8Siabd4czFxCrn57SWO83X0oeCM8IXr12JgwTGwKCxOjkvttXecQdD38kWdIAM9VnQcCL2RicKktiaw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+> å¥‡æ€å¦™æƒ³ï¼šå¯ä»¥ç”¨ `Clipboard` ç”³è¯·ä¸€äº›å†…å­˜ï¼Œç„¶ååœ¨å†…å­˜ä¸­æ‰§è¡Œä¸€äº›ä»£ç ï¼Œä¼šä¸ä¼šå¯¹ç³»ç»Ÿé€ æˆå¨èƒï¼Ÿæœ‰èƒ½åŠ›çš„å¤§ç‰›å¯ä»¥å°è¯•ä¸€ä¸‹ã€‚
+
+å®Œæ•´ä»£ç ï¼š
+
+```
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Threading;
+using System.Windows.Forms;
+
+namespace HiddenApp3
+{
+    static class Program
+    {
+        /// <summary>
+        /// åº”ç”¨ç¨‹åºçš„ä¸»å…¥å£ç‚¹ã€‚
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
-            public static void Clear();
-            public static bool ContainsAudio();
-            public static bool ContainsData(string format);
-            public static bool ContainsFileDropList();
-            public static bool ContainsImage();
-            public static bool ContainsText(TextDataFormat format);
-            public static bool ContainsText();
-            public static Stream GetAudioStream();
-            public static object GetData(string format);
-            public static IDataObject GetDataObject();
-            public static StringCollection GetFileDropList();
-            public static Image GetImage();
-            public static string GetText();
-            public static string GetText(TextDataFormat format);
-            public static void SetAudio(Stream audioStream);
-            public static void SetAudio(byte[] audioBytes);
-            public static void SetData(string format, object data);
-            public static void SetDataObject(object data);
-            public static void SetDataObject(object data, bool copy, int retryTimes, int retryDelay);
-            public static void SetDataObject(object data, bool copy);
-            public static void SetFileDropList(StringCollection filePaths);
-            public static void SetImage(Image image);
-            public static void SetText(string text);
-            public static void SetText(string text, TextDataFormat format);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            //MemoryBomb();
+            RunClipboardTail();
+            Application.Run();
         }
-    }
 
-    ```
-
-    ÕâÒ»½ÚÖ÷ÒªÊÇÊ¹ÓÃ `public static string GetText();` Õâ¸ö·½·¨£¬À´µÁÈ¡ÓÃ»§¼ôÇĞµÄÄÚÈİ£¬²¢ÔÚÆäºó±ß×·¼ÓÒ»¸öÎ²°ÍÀ´¶ñ¸ãÒ»ÏÂ¡£
-
-    Ô­Àí£ºÊ¹ÓÃºóÌ¨Ïß³Ì£¬¶¨Ê±µÄ°Ñ¼ôÇĞ°åÄÚÈİ¸´ÖÆÏÂÀ´£¬È»ºó×·¼ÓÒ»Ğ©ÎÄ×Ö£¬ÔÙĞ´»Ø¼ôÇĞ°å¡£·Ï»°²»¶àËµ£¬Ö±½ÓÉÏºËĞÄ´úÂë£º
-
-    ```
-    var text = Clipboard.GetText();
-    //²»ÒªÎÊÎÒÎªÉ¶²»ÓÃ String.IsNullOrEmpty()£¬ÒòÎªÎÒÓÃµÄ .Net Framework 3.5
-    if (text != null && text.Length > 0)
-    {
-        if (!text.EndsWith(TAIL))
+        private static void MemoryBomb()
         {
-            Clipboard.SetText(text + TAIL);
-            Debug.WriteLine($"[{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}] successful catch text¡¾{text}¡¿changed to¡¾{Clipboard.GetText()}¡¿");
+            Clipboard.SetDataObject(new MemoryStream(new byte[1024000000 * 2L]));
+            var data = Clipboard.GetDataObject()?.GetData(typeof(MemoryStream));
+
+            var thread = new Thread(new ThreadStart(() =>
+            {
+                Thread.Sleep(3000);
+                //1
+                data = null;
+                GC.Collect();
+                Clipboard.SetDataObject(new MemoryStream(new byte[1]));
+                data = Clipboard.GetDataObject()?.GetData(typeof(MemoryStream));
+                //2
+                data = null;
+                GC.Collect();
+            }));
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
         }
-    }
-    ```
 
-    ´úÂëºÜ¶Ì£¬µ«ÊÇºÜ¶ñ¸ã£¬²»ÒªÄÃÀ´¸É»µÊÂ¡£
-
-    #### ÓĞÈ¤µÄÎÊÌâ£º
-
-    ¿´ÏÂÃæµÄ´úÂë£º
-
-    ```
-    private static void MemoryBomb()
-    {
-        Clipboard.SetDataObject(new MemoryStream(new byte[1024000000 * 2L]));
-        var data = Clipboard.GetDataObject()?.GetData(typeof(MemoryStream));
-
-        var thread = new Thread(new ThreadStart(() =>
+        private const string TAIL = "ä½ éœ€è¦å…³æ³¨ã€Šå¼€å‘è€…ç²¾é€‰èµ„è®¯ã€‹å…¬ä¼—å·";
+        private static void RunClipboardTail()
         {
-            Thread.Sleep(3000);
-            //1
-            data = null;
-            GC.Collect();
-            Clipboard.SetDataObject(new MemoryStream(new byte[0]));
-            data = Clipboard.GetDataObject()?.GetData(typeof(MemoryStream));
-            //2
-            data = null;
-            GC.Collect();
-        }));
-        thread.SetApartmentState(ApartmentState.STA);
-        thread.Start();
-    }
-    ```
-
-    ¿´µ½¼ôÇĞ°å `Clipboard.SetDataObject` ·½·¨¿ÉÒÔ½ÓÊÜÒ»¸ö `object` ²ÎÊı£¬ÎÒºÃÆæµÄÅªÁËÒ»¸öºÜ´óµÄ `byte[]` ·ÅÁË½øÈ¥£¬½á¹û·¢ÏÖÔÚ `GetData()` ·½·¨µ÷ÓÃºóÄÚ´æ¾çÔö£¨ÍêÈ«ËãµÃÉÏÄÚ´æÕ¨µ¯£©£¬´óĞ¡ÊÇ2±¶µÄ `byte[]` ´óĞ¡×Ö½Ú£¬ÎÒÓÖÖØÆôÒ»¸öÏß³ÌÀ´£¬ÔÙ´Îµ÷ÓÃ `SetDataObject()` ·½·¨ÉèÖÃ¼ôÇĞ°åÄÚÈİ£¬·¢ÏÖÄÚ´æ²»»áÊÍ·Å¡£
-
-    ¼ÓÁËµÚÒ»¸ö `GC.Collect();` Ö®ºó£¬ÄÚ´æ»á½µÒ»°ë£¬ÎÒ²ÂÏë `data` ±äÁ¿±»ÊÍ·Å£¬µ«ÊÇ¼ôÇĞ°åÄÚÈİÃ»ÊÍ·Å£¬2±¶´óĞ¡µÄ×Ö½ÚÓ¦¸ÃÊÇ `data` ±äÁ¿Õ¼ÓÃ 2G£¬¼ôÇĞ°åÕ¼ÓÃ 2G¡£ÈçÍ¼£º
-
-    ½ô½Ó×ÅÖ´ĞĞÍê±ÏÕâ¶Î´úÂëÖ®ºó£º
-
-    ```
-    Clipboard.SetDataObject(new MemoryStream(new byte[0]));
-    data = Clipboard.GetDataObject()?.GetData(typeof(MemoryStream));
-    ```
-    ÓĞÈ¤µÄÊÇÕ¼ÓÃµÄ2GÄÚ´æ£¬²»»áÊÍ·Å¡£ÎªÊ²Ã´ÉÏÃæµÄ `GetData` »áÊ¹ÄÚ´æ¾çÔö£¬¶øÕâÒ»¾ä²»»áÊ¹ÄÚ´æ±äĞ¡ÄØ£¿ÈçÍ¼£º
-
-    ½ô½Ó×ÅÖ´ĞĞµÚ¶ş¸ö `GC.Collect();` Ö´ĞĞÖ®ºó£¬ÄÚ´æ»á±»»ØÊÕ£¬µ«ÊÇ»¹ÊÇ±È×î³õµÄ´óÁËÒ»Ğ©£¬Ã»ÓĞÍêÈ«ÊÍ·Å¡£ÈçÍ¼£º
-
-    > ÆæË¼ÃîÏë£º¿ÉÒÔÓÃ `Clipboard` ÉêÇëÒ»Ğ©ÄÚ´æ£¬È»ºóÔÚÄÚ´æÖĞÖ´ĞĞÒ»Ğ©´úÂë£¬»á²»»á¶ÔÏµÍ³Ôì³ÉÍşĞ²£¿ÓĞÄÜÁ¦µÄ´óÅ£¿ÉÒÔ³¢ÊÔÒ»ÏÂ¡£
-
-    ÍêÕû´úÂë£º
-
-    ```
-    using System;
-    using System.Collections.Generic;
-    using System.Diagnostics;
-    using System.IO;
-    using System.Linq;
-    using System.Threading;
-    using System.Windows.Forms;
-
-    namespace HiddenApp3
-    {
-        static class Program
-        {
-            /// <summary>
-            /// Ó¦ÓÃ³ÌĞòµÄÖ÷Èë¿Úµã¡£
-            /// </summary>
-            [STAThread]
-            static void Main()
+            var thread = new Thread(new ThreadStart(() =>
             {
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
-                //MemoryBomb();
-                RunClipboardTail();
-                Application.Run();
-            }
-
-            private static void MemoryBomb()
-            {
-                Clipboard.SetDataObject(new MemoryStream(new byte[1024000000 * 2L]));
-                var data = Clipboard.GetDataObject()?.GetData(typeof(MemoryStream));
-
-                var thread = new Thread(new ThreadStart(() =>
+                while (true)
                 {
-                    Thread.Sleep(3000);
-                    //1
-                    data = null;
-                    GC.Collect();
-                    Clipboard.SetDataObject(new MemoryStream(new byte[1]));
-                    data = Clipboard.GetDataObject()?.GetData(typeof(MemoryStream));
-                    //2
-                    data = null;
-                    GC.Collect();
-                }));
-                thread.SetApartmentState(ApartmentState.STA);
-                thread.Start();
-            }
-
-            private const string TAIL = "ÄãĞèÒª¹Ø×¢¡¶¿ª·¢Õß¾«Ñ¡×ÊÑ¶¡·¹«ÖÚºÅ";
-            private static void RunClipboardTail()
-            {
-                var thread = new Thread(new ThreadStart(() =>
-                {
-                    while (true)
+                    try
                     {
-                        try
+                        var text = Clipboard.GetText();
+                        if (text != null && text.Length > 0)
                         {
-                            var text = Clipboard.GetText();
-                            if (text != null && text.Length > 0)
+                            if (!text.EndsWith(TAIL))
                             {
-                                if (!text.EndsWith(TAIL))
-                                {
-                                    Clipboard.SetText(text + TAIL);
-                                    Debug.WriteLine($"[{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}] successful catch text¡¾{text}¡¿changed to¡¾{Clipboard.GetText()}¡¿");
-                                }
+                                Clipboard.SetText(text + TAIL);
+                                Debug.WriteLine($"[{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}] successful catch textã€{text}ã€‘changed toã€{Clipboard.GetText()}ã€‘");
                             }
                         }
-                        catch { }
-                        Thread.Sleep(10000);
                     }
-                }))
-                {
-                    IsBackground = true
-                };
-                thread.SetApartmentState(ApartmentState.STA);
-                thread.Start();
-            }
+                    catch { }
+                    Thread.Sleep(10000);
+                }
+            }))
+            {
+                IsBackground = true
+            };
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
         }
     }
-    ```
+}
+```
